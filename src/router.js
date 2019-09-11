@@ -33,12 +33,6 @@ export default new Router({
 			component: Users,
 			beforeEnter: ifAuthenticated,
 		},
-		// {
-		//   path: '/account',
-		//   name: 'Account',
-		//   component: Account,
-		//   beforeEnter: ifAuthenticated,
-		// },
 		{
 			path: '/login',
 			name: 'Login',
