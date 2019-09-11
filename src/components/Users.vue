@@ -15,7 +15,9 @@
 			:items-per-page="10"
 		>
 			<template v-slot:item.name="{ item }">
-				<a :href="editLink(item.id)">{{ item.name }}</a>
+				<router-link
+					:to="editLink(item.id)"
+				>{{ item.name }}</router-link>
 			</template>
 			<template v-slot:item.delete="{ item }">
 				<a
