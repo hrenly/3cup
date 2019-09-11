@@ -4,6 +4,7 @@ import Users from './views/Users.vue';
 import Login from './views/Login.vue';
 import Edit from './views/Edit.vue';
 import Add from './views/Add.vue';
+import P404 from './views/P404.vue';
 import store from './store';
 
 Vue.use(Router);
@@ -49,6 +50,10 @@ export default new Router({
 			path: '/add',
 			name: 'Add',
 			component: Add,
+			beforeEnter: ifAuthenticated,
+		}, {
+			path: '*',
+			component: P404,
 			beforeEnter: ifAuthenticated,
 		},
 	],
