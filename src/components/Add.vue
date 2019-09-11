@@ -105,8 +105,13 @@ export default {
 			],
 			yearRules: [
 				(v) => {
-					const reg = /^\d{4,4}$/;
-					return reg.test(String(v).toLowerCase()) || 'Неверный формат года';
+					if (!v) {
+						return true;
+					}
+					else {
+						const reg = /^\d{4,4}$/;
+						return reg.test(String(v).toLowerCase()) || 'Неверный формат года';
+					}
 				},
 			],
 		};
